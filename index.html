@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestore Query Activity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .result {
+            background: #f4f4f4;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Firestore Query Activity</h1>
+    <p style="text-align: center;">By Kenlee Duong and Joann Dao</p>
+
+    <h2>Task 1: Add Teams to Firestore</h2>
+    <button onclick="addTeams()">Add All Teams</button>
+    <div id="task1-output"></div>
+
+    <h2>Task 2: Queries</h2>
+    <button onclick="showTeamsInSpain()">Teams in Spain</button>
+    <button onclick="showTeamsInMadridSpain()">Teams in Madrid, Spain</button>
+    <button onclick="showNationalTeams()">National Teams</button>
+    <button onclick="showTeamsNotInSpain()">Teams NOT in Spain</button>
+    <button onclick="showTeamsNotInSpainOrEngland()">Teams NOT in Spain or England</button>
+    <button onclick="showSpainOver700M()">Spain teams with 700M+ fans</button>
+    <button onclick="showFans500to600()">Teams with 500M-600M fans</button>
+    <button onclick="showRonaldoScorer()">Teams where Ronaldo is top scorer</button>
+    <button onclick="showRonaldoMaradonaMessi()">Teams where Ronaldo, Maradona, or Messi is top scorer</button>
+
+    <div id="output"></div>
+
+    <h2>Task 3: Updating Data</h2>
+    <button onclick="updateFansAndNames()">Update Fans & Names</button>
+    <button onclick="updateScorers()">Update Top Scorers</button>
+    <button onclick="addJerseyColors()">Add Jersey Colors</button>
+    <button onclick="updateAwayColors()">Update Away Colors</button>
+    <div id="task3-output"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
